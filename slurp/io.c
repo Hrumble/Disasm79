@@ -12,15 +12,12 @@ uint8_t *read_file(const char *path, size_t *out_len)
     return (malloc(0));
 
   *out_len = 0;
-  size_mul = 2;
+  size_mul = 1;
   while (read(fd, &buf[*out_len], 1))
   {
     (*out_len)++;
     if (*out_len >= MAX_SIZE)
-    {
-      buf = realloc(buf, MAX_SIZE * size_mul * sizeof(uint8_t));
-      size_mul++;
-    }
+      buf = realloc(buf, MAX_SIZE * ++size_mul * sizeof(uint8_t));
   }
   if (*out_len < MAX_SIZE * size_mul)
     buf = realloc(buf, *out_len * sizeof(uint8_t));
