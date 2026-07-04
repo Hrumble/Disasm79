@@ -1,6 +1,5 @@
 #include <stdint.h>
 
-
 int ft_pow(int n, int power)
 {
   while (power) 
@@ -42,4 +41,10 @@ uint32_t get_bits(uint32_t value, int lo, int hi)
 //   printf("0x%08x\n", get_bits(modrm, 3, 5));
 //   print_bits(get_bits(modrm, 0, 2));
 //   printf("0x%08x\n", get_bits(modrm, 0, 2));
+//   print_bits(get_bits(modrm, 3, 0));
+//   printf("0x%08x\n", get_bits(modrm, 0, 2));
+//   print_bits(get_bits(modrm, 2, 2));
+//   printf("0x%08x\n", get_bits(modrm, 2, 2));
+//   print_bits(get_bits(modrm, 0, 31));
+//   printf("0x%08x\n", get_bits(modrm, 0, 31));
 // }
